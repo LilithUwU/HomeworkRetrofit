@@ -60,7 +60,7 @@ class RecycleViewAdapter: RecyclerView.Adapter<RecycleViewAdapter.ViewHolder>() 
         val price: TextView=binding.priceTv
     }
     @SuppressLint("NotifyDataSetChanged")
-    fun setList(items: Any?) {
+    fun setList(items: List<ProductModel>?) {
         if (items != null) {
             values = items.toMutableList()
         }

@@ -4,6 +4,8 @@ import com.google.gson.annotations.SerializedName
 
 data class ProductModel (
     //we are using serializable so during build it doesn't change the name
+
+
     @SerializedName("id")
     val id: Int,
     @SerializedName("title")

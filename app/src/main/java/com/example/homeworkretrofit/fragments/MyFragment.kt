@@ -1,5 +1,5 @@
 package com.example.homeworkretrofit.fragments
-
+import com.example.homeworkretrofit.model.Result
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -53,7 +53,7 @@ class MyFragment:Fragment() {
     private suspend fun getProducts(): Result<List<ProductModel>> = withContext(Dispatchers.IO) {
         val result = service.getProductList()
         if (result.isSuccessful)
-            return@withContext Result.success(result.body() ?: emptyList())
+            return@withContext Result.Success(result.body()?.products ?: emptyList())
         Result.Failure(result.message(), null)
     }
 
