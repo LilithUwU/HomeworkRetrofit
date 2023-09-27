@@ -1,8 +1,8 @@
-package com.example.homeworkretrofit.model
+package com.example.homeworkretrofit.fragments.model
 
 import com.google.gson.annotations.SerializedName
 
-data class ProductModel (
+data class ProductModelEntity(
     //we are using serializable so during build it doesn't change the name
 
 
@@ -11,7 +11,7 @@ data class ProductModel (
     @SerializedName("title")
     val title: String,
     @SerializedName("description")
-    val description:String,
+    val description: String,
     @SerializedName("thumbnail")
     val thumbnail: String,
     @SerializedName("price")

@@ -1,4 +1,4 @@
-package com.example.homeworkretrofit.model
+package com.example.homeworkretrofit.fragments.model
 
 sealed class Result<out R> {
     data class Success<out R>(val value: R) : Result<R>()

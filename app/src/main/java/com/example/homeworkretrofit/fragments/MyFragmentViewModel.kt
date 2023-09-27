@@ -4,16 +4,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.homeworkretrofit.model.ProductModel
-import com.example.homeworkretrofit.model.Result
+import com.example.homeworkretrofit.fragments.model.ProductModelEntity
+import com.example.homeworkretrofit.fragments.model.Result
 import com.example.homeworkretrofit.network.RetrfitObject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class MyFragmentViewModel : ViewModel() {
     private val service = RetrfitObject.createCustomService()
-    private val _productData = MutableLiveData<Result<List<ProductModel>>>()
-    val productData: LiveData<Result<List<ProductModel>>>
+    private val _productData = MutableLiveData<Result<List<ProductModelEntity>>>()
+    val productData: LiveData<Result<List<ProductModelEntity>>>
         get() = _productData
 
     fun getProducts() {
